@@ -20,6 +20,8 @@ setup(
         "scikit-image>=0.15.0",
         "scipy>=1.3.1",
         "six>=1.15.0",
+        "torch>=1.2.0",
+        "torchvision>=0.4.0"
     ],
     python_requires=">=3.6",
 )
