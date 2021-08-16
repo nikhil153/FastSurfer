@@ -17,7 +17,14 @@
 
 VERSION='$Id$'
 FS_VERSION_SUPPORT="stable-pub-v6"
-timecmd="fs_time"
+timecmd="" #"fs_time" 
+
+########### Note ###########
+# fs_time crahses with 
+# mri_convert -c /home/nikhil/projects/green_comp_neuro/watts_up_compute/local_test_data/mni//sub-000/sub-000_ses-1_run-1_desc-preproc_T1w.nii.gz /output/sub-000/mri/orig.mgz
+# ./recon-surf.sh: line 94: fs_time: command not found
+# returned value: 1
+############################
 
 # Regular flags default
 t1=""; # Path and name of T1 input
@@ -29,7 +36,7 @@ fstess=0;       # run mri_tesselate (FS way), if 0 = run mri_mc
 fsqsphere=0;    # run inflate1 and qsphere (FSway), if 0 run spectral projection
 fsaparc=0;	# run FS aparc (and cortical ribbon), if 0 map aparc from seg input
 fssurfreg=0;  # run FS surface registration to fsaverage, if 0 omit this step
-python="python3.6" # python version
+python="python3.8" # python version
 DoParallel=0 # if 1, run hemispheres in parallel
 threads="1" # number of threads to use for running FastSurfer
 

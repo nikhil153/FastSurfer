@@ -16,7 +16,7 @@
 
 # IMPORTS
 import torch.nn as nn
-import models.sub_module as sm
+import FastSurferCNN.models.sub_module as sm
 
 
 class FastSurferCNN(nn.Module):
